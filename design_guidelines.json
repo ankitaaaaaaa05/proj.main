@@ -1,0 +1,130 @@
+{
+  "theme": "LIGHT",
+  "archetype": "4 (Swiss & High-Contrast)",
+  "vibe": "Authority, Clarity, Truth, Objective, Rigid, Functional",
+  "design_principles": [
+    "Function Over Decoration: 95% of the UI must be monochrome. Color exists exclusively to guide action or indicate state.",
+    "Grid Transparency: Expose the skeleton. Use 1px sharp borders to define spaces instead of soft dropshadows.",
+    "Optical Hierarchy: Use stark contrast in typography weights (e.g., Black vs Regular) rather than relying on varied font sizes.",
+    "Dense but Breathable: Use 'Control Room' grids with tight gaps (gap-4/6) but generous internal padding (p-6) within containers.",
+    "The Anti-Default: Prohibit soft rounded corners (use rounded-none or rounded-sm max). No generic 'Inter' for headings."
+  ],
+  "colors": {
+    "background": "#FFFFFF",
+    "surface": "#F4F4F5",
+    "surface_hover": "#E4E4E7",
+    "text_primary": "#09090B",
+    "text_secondary": "#52525B",
+    "text_muted": "#A1A1AA",
+    "border": "#E4E4E7",
+    "primary_accent": "#2563EB", 
+    "primary_hover": "#1D4ED8",
+    "destructive": "#DC2626",
+    "destructive_hover": "#B91C1C",
+    "success": "#16A34A",
+    "warning": "#FACC15",
+    "jwt_valid": "#16A34A",
+    "jwt_invalid": "#DC2626"
+  },
+  "tailwind_classes": {
+    "app_bg": "bg-white",
+    "surface_card": "bg-white border border-zinc-200",
+    "surface_header": "bg-white border-b border-zinc-200",
+    "surface_sidebar": "bg-zinc-50 border-r border-zinc-200",
+    "text_main": "text-zinc-900",
+    "text_muted": "text-zinc-500",
+    "btn_primary": "bg-blue-600 text-white hover:bg-blue-700 transition-colors",
+    "btn_secondary": "bg-white border border-zinc-200 text-zinc-900 hover:bg-zinc-100 transition-colors",
+    "btn_destructive": "bg-red-600 text-white hover:bg-red-700 transition-colors",
+    "input": "border border-zinc-300 rounded-sm focus:ring-2 focus:ring-blue-600 focus:border-transparent focus:outline-none transition-all",
+    "focus_ring": "focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-1"
+  },
+  "typography": {
+    "anti_pattern_reminder": "DO NOT use Inter for Headings. DO NOT use generic soft fonts.",
+    "headings": {
+      "family": "Chivo",
+      "h1": "text-4xl sm:text-5xl font-black tracking-tighter text-zinc-900",
+      "h2": "text-2xl sm:text-3xl font-bold tracking-tight text-zinc-900",
+      "h3": "text-xl sm:text-2xl font-semibold tracking-tight text-zinc-900",
+      "h4": "text-lg font-medium tracking-tight text-zinc-900"
+    },
+    "body": {
+      "family": "IBM Plex Sans",
+      "base": "text-base font-normal text-zinc-700 leading-relaxed",
+      "sm": "text-sm font-normal text-zinc-500",
+      "xs": "text-xs font-medium uppercase tracking-[0.1em] text-zinc-500"
+    }
+  },
+  "layout_and_spacing": {
+    "global_wrapper": "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8",
+    "dashboard_grid": "grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6 items-start",
+    "card_padding": "p-6",
+    "form_spacing": "space-y-6",
+    "radius_rules": "Use rounded-none or rounded-sm (2px) strictly. No rounded-lg or rounded-xl."
+  },
+  "components": {
+    "forms": "Use pure HTML/Tailwind structured via Shadcn's Form wrapper. Inputs must be sharp-edged. Labels must be uppercase 'text-xs tracking-wide' to fit the Swiss aesthetic. Provide JSX logic, not TSX.",
+    "tables": "Flat data tables. `border-collapse`. Rows have `border-b border-zinc-200`. NO alternating row colors. Hover effect: `hover:bg-zinc-50`.",
+    "cards": "Do NOT use heavy dropshadows. Rely on a 1px `border-zinc-200` to separate cards from the pure white background. The 'Grid Borders' look.",
+    "navigation": "Solid white sidebar or top nav. Use active states clearly (`bg-zinc-100 text-zinc-900` for active, `text-zinc-500` for inactive).",
+    "modals_dialogs": "Solid white background, sharp corners (`rounded-sm`), subtle dark overlay (`bg-zinc-900/40 backdrop-blur-sm`).",
+    "toast": "Use Sonner. Configure for bottom-right. Styling: solid white bg, sharp 1px border, text-zinc-900, icon color matching success/error."
+  },
+  "motion_and_interaction": {
+    "rules": "Utilitarian motion. Fast, crisp.",
+    "hover_states": "Every interactive element MUST explicitly declare hover text and background colors.",
+    "transitions": "Use `transition-all duration-150 ease-in-out`.",
+    "focus_states": "Accessibility critical. All inputs/buttons must have a 2px solid ring (`focus:ring-blue-600`) with no blur."
+  },
+  "icons_and_assets": {
+    "library": "@phosphor-icons/react",
+    "install_command": "npm install @phosphor-icons/react or yarn add @phosphor-icons/react",
+    "style": "Use 'Regular' or 'Bold' weights. Avoid 'Thin' or 'Duotone' to maintain high-contrast clarity."
+  },
+  "media_urls": [
+    {
+      "category": "Brand Logo (Abstract)",
+      "url": "https://images.unsplash.com/photo-1693164282323-393c6ce2b708?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjY2NjV8MHwxfHNlYXJjaHwxfHxhYnN0cmFjdCUyMGdlb21ldHJpYyUyMGxvZ28lMjBibGFjayUyMGFuZCUyMHdoaXRlfGVufDB8fHx8MTc3NjM1NjU0OHww&ixlib=rb-4.1.0&q=85",
+      "description": "Minimalist geometric pattern serving as the company logo in header/login."
+    },
+    {
+      "category": "Login Page Background",
+      "url": "https://images.unsplash.com/photo-1656340194408-750a488b6a80?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzB8MHwxfHNlYXJjaHwxfHxtaW5pbWFsaXN0JTIwZ2VvbWV0cmljJTIwYXJjaGl0ZWN0dXJlJTIwYWJzdHJhY3R8ZW58MHx8fHwxNzc2MzU2NTU2fDA&ixlib=rb-4.1.0&q=85",
+      "description": "Abstract minimalist architectural background for the split-screen login page."
+    },
+    {
+      "category": "Empty State Illustration",
+      "url": "https://images.unsplash.com/photo-1773379107743-ebbbca7f02d1?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzh8MHwxfHNlYXJjaHwxfHxlbXB0eSUyMHdoaXRlJTIwc3BhY2UlMjBtaW5pbWFsaXN0JTIwYWJzdHJhY3R8ZW58MHx8fHwxNzc2MzU2NTU2fDA&ixlib=rb-4.1.0&q=85",
+      "description": "Clean, empty white space with architectural elements to use when no tasks exist."
+    },
+    {
+      "category": "User Avatar - Admin",
+      "url": "https://images.unsplash.com/photo-1581841064838-a470c740e8ee?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzF8MHwxfHNlYXJjaHwzfHxwcm9mZXNzaW9uYWwlMjBhdmF0YXIlMjBwb3J0cmFpdCUyMG1pbmltYWxpc3R8ZW58MHx8fHwxNzc2MzU2NTQ5fDA&ixlib=rb-4.1.0&q=85",
+      "description": "Professional avatar for Admin user."
+    },
+    {
+      "category": "User Avatar - Standard",
+      "url": "https://images.unsplash.com/photo-1657180881998-c8a03ef22695?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzF8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBhdmF0YXIlMjBwb3J0cmFpdCUyMG1pbmltYWxpc3R8ZW58MHx8fHwxNzc2MzU2NTQ5fDA&ixlib=rb-4.1.0&q=85",
+      "description": "Professional avatar for Standard user."
+    }
+  ],
+  "testing_attributes": {
+    "rule": "All interactive and key informational elements MUST include a data-testid attribute.",
+    "convention": "kebab-case, role-based",
+    "examples": [
+      "data-testid='login-submit-button'",
+      "data-testid='task-create-input'",
+      "data-testid='admin-delete-user-button'",
+      "data-testid='jwt-status-indicator'"
+    ]
+  },
+  "instructions_to_main_agent": [
+    "1. Do not use generic rounding (like rounded-lg). Stick to sharp borders (rounded-none or rounded-sm max).",
+    "2. Use Chivo for all headings and IBM Plex Sans for body text.",
+    "3. Apply 'data-testid' to ALL interactive elements for automated testing.",
+    "4. Use the provided media URLs exclusively. DO NOT use generic placeholders like via.placeholder.com.",
+    "5. Rely on monochrome palettes (zinc-50 to zinc-900). Use primary color (blue) purely for CTAs, focus rings, and active states.",
+    "6. Build the layout using 'Control Room' grid philosophy (dense but structured, grid-cols-4 for main dashboard stats, grid-cols-3 for tasks list).",
+    "7. Note: The frontend uses JavaScript (.js/.jsx) instead of TypeScript (.tsx)."
+  ]
+}
